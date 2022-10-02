@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Today {{name}}'s Dinner is {{pick.name}}</h1>
+<h1>메뉴 리스트</h1>
+<ul>
+    {% for menu in menus %}
+    <li>{{ menu.name }} {{ menu.price}}won</li>
+    {% endfor %}
+</ul>
+
+
+{% if pick.price > 20000 %}
+<p>Too expensive!!</p>
+{% elif pick.price > 10000 %}
+<p>it's not bad</p>
+{% else %}
+<p>looks good</p>
+{% endif %} {% endblock %}
