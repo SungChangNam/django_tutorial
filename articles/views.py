@@ -1,6 +1,7 @@
 from importlib.resources import contents
 from multiprocessing import context
 import random
+from urllib import request
 from django.shortcuts import render
 
 # Create your views here.
